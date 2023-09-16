@@ -2,20 +2,15 @@ import { StyleSheet, Text, View } from 'react-native'
 import { Colors } from '../../constants/Colors'
 
 export const styles = StyleSheet.create({
-    container:{      
+    container:{
         backgroundColor: Colors.one,
-        height: 90,
+        height: 100,
         width: '100%',
         justifyContent:'center',
-        alignItems: 'center',
-               
+        alignItems: 'center',        
     },
-    containerTitle:{
-     
-    },
-    title:{     
-      fontSize: 30,
-      paddingTop:30,
+    title:{
+      fontSize: 30,      
       color: 'white'
     }
 })

@@ -1,16 +1,12 @@
 import { Text, View } from 'react-native'
 import React from 'react'
-import { styles } from './Header.style'
+import { styles } from './Footer.style'
 
-const Header = ({ title }) => {
+const Footer = ({ title='Footer' }) => {
   return (
     <View style={styles.container}>
-      <View>
       <Text style={styles.title}>{ title }</Text>
-      </View>
-     
     </View>
   )
 }
-export default Header
-
+export default Footer
