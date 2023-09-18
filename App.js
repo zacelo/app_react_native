@@ -9,6 +9,10 @@ export default function App() {
    
   const [ fontsJosefin ] = useFonts(fonts)
 
+  if(!fontsJosefin){
+    return null
+  }
+
   return (
    <>
       <StackNavigation/>
