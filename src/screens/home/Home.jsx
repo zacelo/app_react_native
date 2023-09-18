@@ -10,7 +10,7 @@ const Home = ({ navigation }) => {
   return (
 
     <View>
-      <Header title={'Home'} ></Header>
+      <Header title={'Nuestro menú'} ></Header>
       <Categories navigation={navigation}></Categories>      
       <Footer></Footer>      
     </View>

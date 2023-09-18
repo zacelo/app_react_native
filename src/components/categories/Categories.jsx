@@ -6,9 +6,8 @@ import CategoryItem from '../CategoryItem/CategoryItem'
 
 
 const Categories = ({navigation}) => {
-    return (
-        
-            
+    
+    return (            
             <View style={styles.container}>
                 <FlatList
                     data={categories}                
@@ -17,8 +16,7 @@ const Categories = ({navigation}) => {
                     }
                     keyExtractor={category => category.id}
                 />
-            </View>
-        
+            </View>        
     )
 }
 

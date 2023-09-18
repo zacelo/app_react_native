@@ -11,8 +11,7 @@ export const styles = StyleSheet.create({
         backgroundColor: Colors.two,
         margin:12,
         marginHorizontal:25,
-        borderRadius:15,
-                      
+        borderRadius:15,                      
     },
     img:{
         width: 90,
@@ -24,8 +23,8 @@ export const styles = StyleSheet.create({
     },
     text:{
        color:'white',
-       fontSize: 20,
-       fontWeight: '600',
+       fontSize: 22,
+       fontFamily:'JosefinItalic',       
        marginStart:10       
     },
     containerImag:{

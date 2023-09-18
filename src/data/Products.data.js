@@ -30,7 +30,7 @@ export const products =[
       id: 4,
       nombre: "Pizza jamón y morrones",
       precio: 260,
-      imagen: "imagenes/productos/pizza-jamon-morrones.png",
+      imagen: "https://img-global.cpcdn.com/recipes/c58f456c9f928da4/400x400cq70/photo.jpg",
       descripcion:"Pizza jamon y morrones, familiar, 8 porciones , para compartir, con salsa de tomate, queso muzarella y aceitunas",
       cantidad: 1,
       categoria: "Pizzas"
@@ -39,7 +39,7 @@ export const products =[
       id: 5,
       nombre: "Pizza lomito y huevo duro",
       precio: 240,
-      imagen: "imagenes/productos/pizza-lomito-huevo.png",
+      imagen: "https://www.johaprato.com/files/styles/flexslider_full/public/pizza_con_huevo.jpg?itok=v-ppJd7X",      
       descripcion:"Pizza lomito y huevo duro, familiar, 8 porciones , para compartir, con salsa de tomate y  queso muzarella ",
       cantidad: 1,
       categoria: "Pizzas"
@@ -48,7 +48,7 @@ export const products =[
       id: 6,
       nombre: "Pizza napolitana",
       precio: 230,
-      imagen: "imagenes/productos/pizza-napo.png",
+      imagen: "https://cdn0.recetasgratis.net/es/posts/8/5/2/pizza_napolitana_con_anchoas_13258_orig.jpg",
       descripcion:"Pizza napolitana, familiar, 8 porciones , para compartir, con salsa de tomate, queso muzarella rodajas de tomate, aceitunas y oregano",
       cantidad: 1,
       categoria: "Pizzas"
@@ -57,7 +57,7 @@ export const products =[
       id: 7,
       nombre: "Pizza con panzeta",
       precio: 255,
-      imagen: "imagenes/productos/pizza-panzeta.png",
+      imagen: "https://www.johaprato.com/files/styles/flexslider_full/public/pizza_con_panceta.jpg?itok=VuMS-Glp",
       descripcion:"Pizza con panzeta, familiar, 8 porciones , para compartir, con salsa de tomate, queso muzarella y aceitunas",
       cantidad: 1,
       categoria: "Pizzas"
@@ -66,7 +66,7 @@ export const products =[
       id: 8,
       nombre: "Pizza pepperoni",
       precio: 255,
-      imagen: "imagenes/productos/pizza-pepperoni.png",
+      imagen: "https://placeralplato.com/files/2016/01/Pizza-con-pepperoni-640x480.jpg?width=1200&enable=upscale",
       descripcion:"Pizza pepperonis, familiar, 8 porciones , para compartir, con salsa de tomate, queso muzarella y y finas rodajas de pepperoni",
       cantidad: 1,
       categoria: "Pizzas"
@@ -75,7 +75,7 @@ export const products =[
       id: 20,
       nombre: "Chivito al pan completo",
       precio: 320,
-      imagen: "imagenes/productos/chivito-pan-completo.jpg",
+      imagen: "https://imagenes.montevideo.com.uy/imgnoticias/201608/574584.jpg",
       descripcion:"Chivito al pan, carne de lomo de primera super tierna, con jamon, queso , panceta, huevo frito, tomate y lechuga mas aderezos a elección, acompañado con papas fritas ",
       cantidad: 1,
       categoria: "Chivitos"
@@ -84,7 +84,7 @@ export const products =[
       id: 21,
       nombre: "Chivito al pan comun",
       precio: 280,
-      imagen: "imagenes/productos/chivo-comun.png",
+      imagen: "https://img-global.cpcdn.com/recipes/58ad577a272a2364/1200x630cq70/photo.jpg",
       descripcion:"Chivito al pan, carne de lomo de primera super tierna, con tomate y lechuga, mas aderezos a elección, acompañado con papas fritas ",
       cantidad: 1,
       categoria: "Chivitos"
@@ -93,7 +93,7 @@ export const products =[
       id: 22,
       nombre: "Chivito al plato p/1",
       precio: 350,
-      imagen: "imagenes/productos/chivo-plato-uno.png",
+      imagen: "https://city.woow.com.uy/media/catalog/product/cache/afd5bcc02d0b2b77d40cb1043f7cbc53/a/l/algalope2.jpg",
       descripcion:"Chivito al plato para uno, super completo, puede ser de carne o de pollo, con jamon, queso, panceta, huevo frito, papas fritas, ensalada rusa, tomate lechuga y pickles.",
       cantidad: 1,
       categoria: "Chivitos"
@@ -102,7 +102,7 @@ export const products =[
       id: 23,
       nombre: "Chivito al plato p/2",
       precio: 550,
-      imagen: "imagenes/productos/chivito-plato-dos.jpg",
+      imagen: "https://media-cdn.tripadvisor.com/media/photo-s/16/3f/66/95/chivito-al-plato-para.jpg",
       descripcion:"Chivito al plato para dos, super completo, puede ser de carne o de pollo, con jamon, queso, panceta, 2 huevos fritos, papas fritas, ensalada rusa, tomate lechuga y pickles.",
       cantidad: 1,
       categoria: "Chivitos"
@@ -111,7 +111,7 @@ export const products =[
       id: 40,
       nombre: "Hamburguesa completa",
       precio: 250,
-      imagen: "imagenes/productos/hambur-comple.jpg",
+      imagen: "https://tn.com.ar/resizer/9a6ETMhiIKAMGwYxwuiw4lhQ7H8=/767x0/smart/filters:format(webp)/cloudfront-us-east-1.images.arcpublishing.com/artear/77ST57RMRJBWDNLNCKVY5AKLD4.jpg",
       descripcion:"Hamburguesa completa, doble/triple/cuadruple, con jamón, queso chedar , panceta, huevo frito, tomate fresco y lechuga, con aderezos a elección",
       cantidad: 1,
       categoria: "Hamburguesas"
@@ -120,7 +120,7 @@ export const products =[
       id: 41,
       nombre: "Hamburguesa común",
       precio: 210,
-      imagen: "imagenes/productos/hamburguesa-comun.png",
+      imagen: "https://lodetito.pedidosonline.uy/wp-content/uploads/2021/11/hamburguesasimple-300x300.jpg",
       descripcion:"Hamburguesa comun, tomate fresco y lechuga, con aderezos a elección",
       cantidad: 1,
       categoria: "Hamburguesas"
@@ -129,7 +129,7 @@ export const products =[
       id: 42,
       nombre: "Hamburguesa al plato",
       precio: 240,
-      imagen: "imagenes/productos/hamburguesa-plato-papas.png",
+      imagen: "https://img.freepik.com/fotos-premium/hamburguesas-caseras-ensalada-verde-plato_650366-256.jpg",
       descripcion:"2 Hamburguesas al plato caseras, con papas fritas o rusticas",
       cantidad: 1,
       categoria: "Hamburguesas"

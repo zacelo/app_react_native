@@ -1,17 +1,20 @@
 import { StatusBar } from 'expo-status-bar';
-import { ScrollView, StyleSheet , View} from 'react-native';
-import Home from './src/screens/home/Home';
-import { Colors } from './src/constants/Colors'
+import {  StyleSheet } from 'react-native';
 import StackNavigation from './src/navigation/StackNavigation';
+import Footer from './src/components/footer/Footer';
+import { useFonts } from 'expo-font';
+import fonts from './src/global/fonts';
 
 export default function App() {
+   
+  const [ fontsJosefin ] = useFonts(fonts)
+
   return (
    <>
-    <StackNavigation/>
+      <StackNavigation/>
       <StatusBar style='auto'/>
-   </>
-     
-    
+      <Footer></Footer>
+   </>    
   );
 }
 
