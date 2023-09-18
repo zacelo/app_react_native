@@ -5,10 +5,11 @@ import Card from '../card/Card'
 import { AntDesign } from '@expo/vector-icons';
 import { Colors } from '../../constants/Colors';
 
-const CategoryItem = ({ category }) => {
+
+const CategoryItem = ({ category, navigation }) => {
    
     return (
-        <Pressable onPress={() => console.log(`categoria ${category.item.category}`)}>
+        <Pressable  onPress={()=> navigation.navigate('Productos',{category})}>
             <Card style={styles.container}>
                 <View style={styles.containerImag}>
                     <Image

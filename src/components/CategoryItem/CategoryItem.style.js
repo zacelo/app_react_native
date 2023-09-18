@@ -11,7 +11,8 @@ export const styles = StyleSheet.create({
         backgroundColor: Colors.two,
         margin:12,
         marginHorizontal:25,
-        borderRadius:15,               
+        borderRadius:15,
+                      
     },
     img:{
         width: 90,

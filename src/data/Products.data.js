@@ -1,9 +1,9 @@
-[
+export const products =[
     {
       id: 1,
       nombre: "Pizza con muzarella",
       precio: 180,
-      imagen: "imagenes/productos/pizza-mozarella.jpg",
+      imagen: "https://i0.wp.com/www.ararat.com.uy/staging/3498/wp-content/uploads/2022/09/pizzeta-con-muzzarella.webp?resize=300%2C300&ssl=1",
       descripcion:"Pizza muzarella grande, familiar, 8 porciones , para compartir, con salsa de tomate, queso muzarella y aceitunas",
       cantidad: 1,
       categoria: "Pizzas"
@@ -12,7 +12,7 @@
       id: 2,
       nombre: "Pizza con anana",
       precio: 250,
-      imagen: "imagenes/productos/pizza-anana.png",
+      imagen: "https://pastaselaguila.ar/wp-content/uploads/2021/10/227-300x300.jpg  ",
       descripcion:"Pizza jamon y ananá grande, familiar, 8 porciones , para compartir, con salsa de tomate y queso muzarella",
       cantidad: 1,
       categoria: "Pizzas"
@@ -21,7 +21,7 @@
       id: 3,
       nombre: "Pizza fugazzeta",
       precio: 230,
-      imagen: "imagenes/productos/pizza-fugazzeta.png",
+      imagen: "https://guiafemenina.com/wp-content/uploads/2020/11/pizza-fugazza-300x300.jpg",
       descripcion:"Pizza fugazzeta, familiar, 8 porciones , para compartir, con salsa de tomate, queso muzarella y aceitunas y cebollas cortadas en juliana",
       cantidad: 1,
       categoria: "Pizzas"
