@@ -1,12 +1,12 @@
 import { View } from 'react-native'
 import React from 'react'
-import { styles } from './Home.style'
+import { styles } from '../screenProducts/ScreenProducts.style' 
 import Header from '../../components/header/Header'
 import Categories from '../../components/categories/Categories'
 import Footer from '../../components/footer/Footer'
 
 
-const Home = ({ navigation }) => {
+const ScreenHome = ({ navigation }) => {
   return (
 
     <View>
@@ -17,5 +17,5 @@ const Home = ({ navigation }) => {
   )
 }
 
-export default Home
+export default ScreenHome
 

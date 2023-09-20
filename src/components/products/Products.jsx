@@ -1,10 +1,10 @@
-import { View,Text, FlatList, Image} from 'react-native'
+import { View,Text, FlatList, Image,Pressable} from 'react-native'
 import React, { useEffect, useState } from 'react'
 import { products } from '../../data/Products.data'
 import { styles } from './Products.style'
 
 
-const Products = ({category}) => {
+const Products = ({category,navigation}) => {
 
     const [productsFilter, setProductsFilter] = useState([])
 
@@ -20,19 +20,20 @@ const Products = ({category}) => {
         keyExtractor={item => item.id}
         renderItem={({ item }) => (
 
-          <View style={styles.containerProduct}>
+          <Pressable style={styles.containerProduct} onPress={()=> navigation.navigate('Detalle',{item})}>
 
             <View style={styles.cardProduct}>
             
               <Image
                style={styles.img}
                 source={{
-                  uri: `${item.imagen}`,
+                  uri: `${item.imagen}`
                 }}>
               </Image>
               <Text style={styles.cardText}>{item.nombre}</Text>
+              <Text style={styles.priceText}>$ {item.precio}</Text>
             </View>
-          </View>
+          </Pressable>
         )}
       /> 
     

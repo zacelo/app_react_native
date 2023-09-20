@@ -7,26 +7,35 @@ export const styles = StyleSheet.create({
        flexDirection:'row',
        justifyContent:'center',
        alignItems:'center',
-       marginVertical:10       
+       marginVertical:10,
+             
     },
     cardProduct:{
         
-       width:'85%',
-       height:180,
+       width:'90%',
+       height:190,
        marginBottom:5,       
        alignItems:'center',   
-       borderWidth:2,
-       borderColor:Colors.one,
-       justifyContent:'space-between'
-      
-      
+       borderRadius:18 ,
+       justifyContent:'space-between',
+       backgroundColor: Colors.one,
+       paddingBottom: 10
     },
     img:{
         width: '100%',
-        height: '60%',                            
+        height: '60%',
+        borderRadius:8 ,                           
     },
     cardText:{
        textAlign:'center',
-      marginBottom:15
+       fontWeight:'bold',
+       color: Colors.three,
+       paddingTop:5
+    },
+    priceText:{
+      fontSize:18,
+      fontWeight:'bold',
+      color:Colors.four,
+      
     }
 })

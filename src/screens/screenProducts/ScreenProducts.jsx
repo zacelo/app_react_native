@@ -5,14 +5,14 @@ import Header from '../../components/header/Header'
 import Products from '../../components/products/Products'
 
 
-const ScreenProducts = ({ route }) => {
+const ScreenProducts = ({ navigation, route }) => {
 
   const { category } = route.params  
 
   return (
     <View style={styles.container}>
       <Header title={category.item.category}></Header>
-      <Products category={category}></Products>      
+      <Products category={category} navigation={navigation}></Products>      
     </View>
   )
 }

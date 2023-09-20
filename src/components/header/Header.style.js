@@ -14,9 +14,9 @@ export const styles = StyleSheet.create({
      
     },
     title:{     
-      fontSize: 40,    
+      fontSize: 30,    
       color: 'white',
       fontFamily:'JosefinItalic',
-       
+       textAlign:'center' 
     }
 })
