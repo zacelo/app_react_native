@@ -28,8 +28,9 @@ export const styles = StyleSheet.create({
     },
     cardText:{
        textAlign:'center',
-       fontWeight:'bold',
-       color: Colors.three,
+       fontFamily:'JosefinBoldItalic',
+       fontSize:16,
+       color: Colors.four,
        paddingTop:5
     },
     priceText:{

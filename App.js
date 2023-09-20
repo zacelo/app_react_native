@@ -17,7 +17,7 @@ export default function App() {
    <>
       <StackNavigation/>
       <StatusBar style='auto'/>
-      <Footer></Footer>
+     
    </>    
   );
 }
