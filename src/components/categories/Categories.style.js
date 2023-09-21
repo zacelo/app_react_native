@@ -3,7 +3,7 @@ import { Colors } from '../../constants/Colors'
 
 export const styles = StyleSheet.create({
    container:{   
-     marginBottom:260,
+     marginBottom:180,
      backgroundColor: Colors.four,     
   }
 })

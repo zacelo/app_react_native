@@ -1,12 +1,23 @@
 import { Pressable, Image, Text, View } from 'react-native'
-import React from 'react'
+import React, { useState } from 'react'
 import { styles } from './ProductsDetails.style'
 import { FontAwesome } from '@expo/vector-icons';
 import { Colors } from '../../constants/Colors';
-import { Entypo } from '@expo/vector-icons';
+
 
 const ProductsDetais = ({ product }) => {
-  return (
+
+  const [count, setCount] = useState(product.cantidad)
+
+  const sumar = () => setCount(count + 1)
+
+  const restar = () => {
+    if (count > 1) {
+      setCount(count - 1)
+    }
+  }
+
+  return (  
     <View style={styles.container}>
 
       <Image
@@ -17,18 +28,21 @@ const ProductsDetais = ({ product }) => {
 
       <Text style={styles.descriptionText}>{product.descripcion}</Text>
 
-      
+
       <View style={styles.cantContainer}>
         <Text style={[styles.cantItem, styles.cantText]}>Cantidad</Text>
-        <FontAwesome name="arrow-circle-left" size={50} color={Colors.one} />
-        <Text style={styles.cantItem}>{product.cantidad}</Text>
-        <FontAwesome name="arrow-circle-right" size={50} color={Colors.one} />
+        <Pressable onPress={restar}>
+          <FontAwesome name="arrow-circle-left" size={50} color={Colors.two} />
+        </Pressable>
+        <Text style={styles.cantItem}>{count}</Text>
+        <Pressable onPress={sumar}>
+          <FontAwesome name="arrow-circle-right" size={50} color={Colors.two} />
+        </Pressable>
       </View>
       <Text style={styles.priceText}>PRECIO $ {product.precio}</Text>
-      <Pressable onPress={()=>console.log('agregar al carrito')}>
+      <Pressable onPress={() => console.log('agregar al carrito')}>
         <View style={styles.buttonContainer}>
-          <Text style={styles.buttonText}>Agregar al </Text>
-          <Entypo name="shopping-cart" size={45} color={Colors.four} />
+          <Text style={styles.buttonText}>Agregar</Text>
         </View>
       </Pressable>
     </View>

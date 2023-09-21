@@ -17,7 +17,7 @@ export default function App() {
     <>
       <NavigationContainer>
         <ButtonTabNavigation />
-        <StatusBar style='auto' />
+        <StatusBar style='dark' />
       </NavigationContainer>    
     </>
   );

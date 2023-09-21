@@ -4,7 +4,7 @@ import { Colors } from '../../constants/Colors'
 export const styles = StyleSheet.create({
     container:{
         width:'90%',
-        height:'87%',       
+        height:'85%',       
         alignSelf:'center',       
         borderColor:'black',       
        justifyContent:'space-around',
@@ -13,21 +13,17 @@ export const styles = StyleSheet.create({
     },
     cantContainer:{        
       flexDirection:'row',      
-      alignItems:'center',
-      marginBottom:10,
-      borderColor:Colors.one,
-      borderWidth:4 ,
+      alignItems:'center',           
       width:'100%',
-      paddingVertical:5,
-      borderRadius:10
-             
+      paddingVertical:5,             
     },
     img:{
         width: '100%',
-        height: '45%',                                  
+        height: '40%',
+        marginTop:10                                  
     },
     descriptionText:{
-      fontSize:20,
+      fontSize:19,
       textAlign: 'center',
       fontFamily:'JosefinItalic',
     },
@@ -49,7 +45,7 @@ export const styles = StyleSheet.create({
         flexDirection:'row',
         alignItems:'center',
         justifyContent:'center',
-        backgroundColor: Colors.one,
+        backgroundColor: Colors.two,
         borderRadius:15,
         paddingHorizontal:25,
         paddingVertical:10
