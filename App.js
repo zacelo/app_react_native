@@ -1,27 +1,28 @@
 import { StatusBar } from 'expo-status-bar';
-import {  StyleSheet } from 'react-native';
-import StackNavigation from './src/navigation/StackNavigation';
-import Footer from './src/components/footer/Footer';
+import { StyleSheet } from 'react-native';
 import { useFonts } from 'expo-font';
 import fonts from './src/global/fonts';
+import { NavigationContainer } from '@react-navigation/native'
+import ButtonTabNavigation from './src/navigation/ButtonTabNavigation';
 
 export default function App() {
-   
-  const [ fontsJosefin ] = useFonts(fonts)
 
-  if(!fontsJosefin){
+  const [fontsJosefin] = useFonts(fonts)
+
+  if (!fontsJosefin) {
     return null
   }
 
   return (
-   <>
-      <StackNavigation/>
-      <StatusBar style='auto'/>
-     
-   </>    
+    <>
+      <NavigationContainer>
+        <ButtonTabNavigation />
+        <StatusBar style='auto' />
+      </NavigationContainer>    
+    </>
   );
 }
 
 const styles = StyleSheet.create({
- 
+
 });

@@ -1,5 +1,3 @@
-
-import { NavigationContainer } from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import React from 'react'
 import ScreenHome  from '../screens/screenHome/ScreenHome'
@@ -8,9 +6,9 @@ import ScreenDetails from '../screens/screendetails/ScreenDetails'
 
 const Stack = createNativeStackNavigator()
 
-const StackNavigation = () => {
+const HomeNavigation = () => {
   return (
-    <NavigationContainer>
+    
         <Stack.Navigator screenOptions={({route})=> ({
           headerBackTitle:'popo'
         })}>
@@ -18,8 +16,8 @@ const StackNavigation = () => {
             <Stack.Screen name='Productos' component={  ScreenProducts }/>
             <Stack.Screen name='Detalle'   component={ ScreenDetails}/>
         </Stack.Navigator>
-    </NavigationContainer>
+   
   )
 }
 
-export default StackNavigation
+export default HomeNavigation

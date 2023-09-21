@@ -1,4 +1,4 @@
-import { Text, View } from 'react-native'
+import { View } from 'react-native'
 import React from 'react'
 import ProductsDetais from '../../components/productsDetails/ProductsDetails'
 import Header from '../../components/header/Header'
