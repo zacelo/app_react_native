@@ -1,3 +1,5 @@
+import { Provider } from 'react-redux';
+import { store } from './src/store';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet } from 'react-native';
 import { useFonts } from 'expo-font';
@@ -14,12 +16,12 @@ export default function App() {
   }
 
   return (
-    <>
+    <Provider store={store}>
       <NavigationContainer>
         <ButtonTabNavigation />
         <StatusBar style='dark' />
       </NavigationContainer>    
-    </>
+    </Provider>
   );
 }
 
