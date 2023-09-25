@@ -7,18 +7,27 @@ export const CartSlice = createSlice({
     initialState,
     reducers: {
         addToCart: (state, { payload }) => {
-            const popo = state.find((e) => e.id == payload.id)
-            if (popo != undefined) {
-                popo.cantidad += payload.cantidad
-                popo.total = popo.precio * popo.cantidad
+            const productExists = state.find((e) => e.id == payload.id)
+            if (productExists != undefined) {
+                productExists.cantidad += payload.cantidad
+                productExists.total = productExists.precio * productExists.cantidad
             } else {
                 state.push(payload)
             }
+        },
+        deleteToCart: (state, { payload }) => {
+            const deleteProduct = state.find((e) => e.id == payload)
+            if(deleteProduct.cantidad > 1){
+                 deleteProduct.cantidad -= 1
+            }else{
+              
+            }
         }
-    }
+    },
+   
 })
 
-export const { addToCart } = CartSlice.actions
+export const { addToCart, deleteToCart } = CartSlice.actions
 
 export default CartSlice.reducer
 

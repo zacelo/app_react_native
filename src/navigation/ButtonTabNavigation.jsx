@@ -1,6 +1,6 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import React from 'react'
-import { StyleSheet, Text } from 'react-native'
+import { StyleSheet, Text, View } from 'react-native'
 import HomeNavigation from "./HomeNavigation";
 import { Colors } from "../constants/Colors";
 import { FontAwesome5 } from '@expo/vector-icons';
@@ -11,37 +11,39 @@ const Tab = createBottomTabNavigator()
 
 
 const ButtonTabNavigation = () => {
-const cart = useSelector(state => state.cart)
+    const cart = useSelector(state => state.cart)
 
     return (
-        <Tab.Navigator screenOptions={{ headerShown: false,  tabBarStyle: styles.tabBar, tabBarShowLabel:false}}>
+        <Tab.Navigator screenOptions={{ headerShown: false, tabBarStyle: styles.tabBar, tabBarShowLabel: false }}>
             <Tab.Screen
                 name="Tienda"
                 component={HomeNavigation}
                 options={{
                     tabBarIcon: ({ focused }) => (
                         <>
-                         <FontAwesome5 name="shopping-bag" size={35} color={focused ? Colors.four : Colors.two} />
-                         <Text style={[styles.tabBaraText,{color:focused ? Colors.four : Colors.two}]}> Tienda</Text>
+                            <FontAwesome5 name="shopping-bag" size={35} color={focused ? Colors.four : Colors.two} />
+                            <Text style={[styles.tabBarText, { color: focused ? Colors.four : Colors.two }]}> Tienda</Text>
                         </>
-                       
+
                     )
                 }
-            }
-                 />
-            <Tab.Screen 
-            name="Carrito" 
-            component={ScreenCart}
-            options={{
-                tabBarIcon: ({ focused }) => (
-                    <>
-                    <FontAwesome5 name="shopping-cart" size={35} color={focused ? Colors.four : Colors.two} />
-                    <Text style={[styles.tabBaraText,{color:focused ? Colors.four : Colors.two}]}> Carrito</Text>
-                    <Text style={[styles.tabBaraText,{color:focused ? Colors.four : Colors.two}]}> {cart.length}</Text>
-                    </>
-                    
-                )
-            }}
+                }
+            />
+            <Tab.Screen
+                name="Carrito"
+                component={ScreenCart}
+                options={{
+                    tabBarIcon: ({ focused }) => (
+                        <>
+                            <View style={styles.tabBarContainerCart}>
+                                <FontAwesome5 name="shopping-cart" size={35} color={focused ? Colors.four : Colors.two} />
+                                <Text style={[styles.tabBarText, { color: focused ? Colors.four : Colors.two }]}> {cart.length != 0  && cart.length}</Text>
+                            </View>
+                            <Text style={[styles.tabBarText, { color: focused ? Colors.four : Colors.two }]}> Carrito</Text>
+                        </>
+
+                    )
+                }}
             />
         </Tab.Navigator>
     )
@@ -54,10 +56,13 @@ const styles = StyleSheet.create({
         backgroundColor: Colors.one,
         height: 90,
         borderTopRightRadius: 25,
-        borderTopLeftRadius: 25,                
+        borderTopLeftRadius: 25,
     },
-    tabBaraText:{
-       fontFamily:'JosefinItalic',
-       fontSize:19
+    tabBarText: {
+        fontFamily: 'JosefinItalic',
+        fontSize: 19
+    },
+    tabBarContainerCart:{
+        flexDirection:'row',        
     }
 })
