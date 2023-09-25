@@ -10,8 +10,7 @@ export const styles = StyleSheet.create({
        marginVertical:10,
              
     },
-    cardProduct:{
-        
+    cardProduct:{        
        width:'90%',
        height:190,
        marginBottom:5,       

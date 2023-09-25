@@ -2,9 +2,9 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import React from 'react'
 import { StyleSheet, Text } from 'react-native'
 import HomeNavigation from "./HomeNavigation";
-import Cart from "../components/cart/Cart";
 import { Colors } from "../constants/Colors";
 import { FontAwesome5 } from '@expo/vector-icons';
+import ScreenCart from "../screens/screenCart/ScreenCart";
 
 const Tab = createBottomTabNavigator()
 
@@ -28,7 +28,7 @@ const ButtonTabNavigation = () => {
                  />
             <Tab.Screen 
             name="Carrito" 
-            component={Cart}
+            component={ScreenCart}
             options={{
                 tabBarIcon: ({ focused }) => (
                     <>
