@@ -2,6 +2,7 @@ import { FlatList, Image, Text, View } from 'react-native'
 import React from 'react'
 import { styles } from './Cart.style'
 import { useSelector } from 'react-redux'
+import { FontAwesome5 } from '@expo/vector-icons';
 
 const Cart = () => {
 
@@ -29,8 +30,9 @@ const Cart = () => {
                 <Text style={styles.cartText}>Cantidad {item.cantidad}</Text>
                 <Text style={styles.cartText}>Precio $ {item.precio}</Text>
                 <Text style={styles.cartText}>Total $ {item.total}</Text>
+                <FontAwesome5 name="trash-alt" size={34} color="red" />
               </View>
-              
+             
             </View>
           </>
         )}

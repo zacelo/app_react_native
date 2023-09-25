@@ -5,11 +5,14 @@ import HomeNavigation from "./HomeNavigation";
 import { Colors } from "../constants/Colors";
 import { FontAwesome5 } from '@expo/vector-icons';
 import ScreenCart from "../screens/screenCart/ScreenCart";
+import { useSelector } from "react-redux";
 
 const Tab = createBottomTabNavigator()
 
 
 const ButtonTabNavigation = () => {
+const cart = useSelector(state => state.cart)
+
     return (
         <Tab.Navigator screenOptions={{ headerShown: false,  tabBarStyle: styles.tabBar, tabBarShowLabel:false}}>
             <Tab.Screen
@@ -34,6 +37,7 @@ const ButtonTabNavigation = () => {
                     <>
                     <FontAwesome5 name="shopping-cart" size={35} color={focused ? Colors.four : Colors.two} />
                     <Text style={[styles.tabBaraText,{color:focused ? Colors.four : Colors.two}]}> Carrito</Text>
+                    <Text style={[styles.tabBaraText,{color:focused ? Colors.four : Colors.two}]}> {cart.length}</Text>
                     </>
                     
                 )
