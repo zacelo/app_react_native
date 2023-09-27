@@ -19,8 +19,9 @@ export const CartSlice = createSlice({
             const deleteProduct = state.find((e) => e.id == payload)
             if(deleteProduct.cantidad > 1){
                  deleteProduct.cantidad -= 1
+                 deleteProduct.total -= deleteProduct.precio
             }else{
-              
+                state.splice(state.indexOf(deleteProduct),1)
             }
         }
     },

@@ -1,6 +1,6 @@
 import { View } from 'react-native'
 import React from 'react'
-import ProductsDetais from '../../components/productsDetails/ProductsDetails'
+import ProductsDetails from '../../components/productsDetails/ProductsDetails'
 import Header from '../../components/header/Header'
 
 
@@ -11,7 +11,7 @@ const ScreenDetails = ({route}) => {
   return (
     <View>
       <Header title={item.nombre}></Header>
-      <ProductsDetais product={item}></ProductsDetais>
+      <ProductsDetails product={item} ></ProductsDetails>
     </View>
   )
 }

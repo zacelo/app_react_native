@@ -4,13 +4,14 @@ import { styles } from './ProductsDetails.style'
 import Counter from '../counter/Counter';
 import { useDispatch, useSelector } from 'react-redux';
 import { addToCart } from '../../features/cart/CartSlice';
+import { reset } from '../../features/counter/CounterSlice';
 
-const ProductsDetais = ({ product }) => {
+const ProductsDetails = ({ product }) => {
 
   const cant = useSelector(state => state.counter.value)
   const dispach = useDispatch()
 
-  return (  
+  return (
     <View style={styles.container}>
 
       <Image
@@ -22,9 +23,13 @@ const ProductsDetais = ({ product }) => {
       <Text style={styles.descriptionText}>{product.descripcion}</Text>
 
       <Counter title={'Cantidad'}></Counter>
-      
+
       <Text style={styles.priceText}>PRECIO $ {product.precio}</Text>
-      <Pressable onPress={() => dispach(addToCart({...product, cantidad:cant,total: (cant * product.precio)})) }>
+      <Pressable onPress={() => {
+        dispach(addToCart({ ...product, cantidad: cant, total: (cant * product.precio) }))
+        dispach(reset())       
+      }
+      }>
         <View style={styles.buttonContainer}>
           <Text style={styles.buttonText}>Agregar</Text>
         </View>
@@ -33,5 +38,5 @@ const ProductsDetais = ({ product }) => {
   )
 }
 
-export default ProductsDetais
+export default ProductsDetails
 
