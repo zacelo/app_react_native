@@ -4,12 +4,20 @@ import { styles } from './CategoryItem.style'
 import Card from '../card/Card'
 import { AntDesign } from '@expo/vector-icons';
 import { Colors } from '../../constants/Colors';
+import { useDispatch } from 'react-redux';
+import { setCategorySelected, setProductFilterByCategories } from '../../features/shop/ShopSlice';
 
 
 const CategoryItem = ({ category, navigation }) => {
-   
+    
+    const dispach = useDispatch()
+  
     return (
-        <Pressable  onPress={()=> navigation.navigate('Productos',{category})}>
+        <Pressable  onPress={()=> {            
+            dispach(setCategorySelected(category.item.category))
+           
+            navigation.navigate('Productos')}
+            }>
             <Card style={styles.container}>
                 <View style={styles.containerImag}>
                     <Image

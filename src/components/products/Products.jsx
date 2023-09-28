@@ -1,19 +1,22 @@
 import { View,Text, FlatList, Image,Pressable} from 'react-native'
 import React, { useEffect, useState } from 'react'
-import { products } from '../../data/Products.data'
 import { styles } from './Products.style'
+import { useDispatch, useSelector } from 'react-redux'
 
+const Products = ({navigation}) => {
 
-const Products = ({category,navigation}) => {
-
-    const [productsFilter, setProductsFilter] = useState([])
+  const products = useSelector(state => state.shop.products)
+  const category = useSelector(state => state.shop.categorySelected)   
+  
+  const productsFilter = useSelector(state => state.shop.productFilterByCategories)
+  
+   /*  const [productsFilter, setProductsFilter] = useState([])
 
     useEffect(() => {
-        setProductsFilter(products.filter(item => item.categoria === category.item.category)) 
-    }, [category])
+        setProductsFilter(products.filter(item => item.categoria === category)) 
+    }, [category]) */
 
-  return ( 
-    
+  return (     
     <FlatList
         data={productsFilter}
         numColumns={2}
@@ -35,8 +38,7 @@ const Products = ({category,navigation}) => {
             </View>
           </Pressable>
         )}
-      /> 
-    
+      />     
   )
 }
 
