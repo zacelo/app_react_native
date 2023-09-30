@@ -4,8 +4,6 @@ import { styles } from '../screenProducts/ScreenProducts.style'
 import Header from '../../components/header/Header'
 import Categories from '../../components/categories/Categories'
 
-
-
 const ScreenHome = ({ navigation }) => {
   return (
 

@@ -1,5 +1,5 @@
 import { FlatList, Image, Pressable, Text, View } from 'react-native'
-import React from 'react'
+import React, { useEffect } from 'react'
 import { styles } from './Cart.style'
 import { useDispatch, useSelector } from 'react-redux'
 import { FontAwesome5 } from '@expo/vector-icons';
@@ -9,14 +9,19 @@ const Cart = () => {
   const cart = useSelector(state => state.cart)
   const dispach = useDispatch()
 
-  const total = cart.reduce((acc, item) => {
-    return acc = acc + item.total
-  }, 0)
+  const totalCarrito = () => {
+    const total = cart.reduce((acc, item) => {
+      return acc = acc + item.total
+    }, 0)
+    return total
+  }
 
+  useEffect(() => {
+    totalCarrito()
+  }, [cart])
 
   return (
     <View style={styles.container}>
-
       <FlatList
         data={cart}
         key={cart.id}
@@ -41,18 +46,16 @@ const Cart = () => {
                 </Pressable>
               </View>
             </View>
-
           </>
-
         )}
       />
       <View style={styles.totalContainer}>
         {
-          total == 0
+          totalCarrito() == 0
             ? <Text style={styles.totalText}>Carrito vacío </Text>
             : <>
               <Text style={styles.totalText}>Total </Text>
-              <Text style={styles.totalText}> $ {total}</Text>
+              <Text style={styles.totalText}> $ {totalCarrito()}</Text>
             </>
         }
       </View>

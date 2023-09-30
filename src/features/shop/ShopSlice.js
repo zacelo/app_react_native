@@ -19,7 +19,7 @@ const ShopSlice = createSlice({
             state.productFilterByCategories = state.products.filter(item => item.categoria == action.payload)            
         },
         setProductIdSelected: (state,action)=>{
-
+           state.productIdSelected = action.payload
         },       
     }
 })

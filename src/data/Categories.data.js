@@ -1,5 +1,3 @@
-
-
 export const categories = [
     {id:1, category:'Pizzas',img:'https://es.cravingsjournal.com/wp-content/uploads/2020/09/pizza-de-masa-madre-4-500x500.jpg'},
     {id:2, category:'Hamburguesas', img:'https://www.hogar.mapfre.es/media/2018/09/hamburguesa-sencilla-500x500.jpg'},

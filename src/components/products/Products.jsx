@@ -1,44 +1,37 @@
-import { View,Text, FlatList, Image,Pressable} from 'react-native'
-import React, { useEffect, useState } from 'react'
+import { View, Text, FlatList, Image, Pressable } from 'react-native'
+import React from 'react'
 import { styles } from './Products.style'
 import { useDispatch, useSelector } from 'react-redux'
+import { setProductIdSelected } from '../../features/shop/ShopSlice'
 
-const Products = ({navigation}) => {
+const Products = ({ navigation }) => { 
 
-  const products = useSelector(state => state.shop.products)
-  const category = useSelector(state => state.shop.categorySelected)   
-  
   const productsFilter = useSelector(state => state.shop.productFilterByCategories)
-  
-   /*  const [productsFilter, setProductsFilter] = useState([])
+  const dispach = useDispatch()
 
-    useEffect(() => {
-        setProductsFilter(products.filter(item => item.categoria === category)) 
-    }, [category]) */
-
-  return (     
+  return (
     <FlatList
-        data={productsFilter}
-        numColumns={2}
-        keyExtractor={item => item.id}
-        renderItem={({ item }) => (
-
-          <Pressable style={styles.containerProduct} onPress={()=> navigation.navigate('Detalle',{item})}>
-
-            <View style={styles.cardProduct}>
-            
-              <Image
-               style={styles.img}
-                source={{
-                  uri: `${item.imagen}`
-                }}>
-              </Image>
-              <Text style={styles.cardText}>{item.nombre}</Text>
-              <Text style={styles.priceText}>$ {item.precio}</Text>
-            </View>
-          </Pressable>
-        )}
-      />     
+      data={productsFilter}
+      numColumns={2}
+      keyExtractor={item => item.id}
+      renderItem={({ item }) => (
+        <Pressable style={styles.containerProduct} onPress={() => { 
+          dispach(setProductIdSelected(item))         
+          navigation.navigate('Detalle')
+        }}>
+          <View style={styles.cardProduct}>
+            <Image
+              style={styles.img}
+              source={{
+                uri: `${item.imagen}`
+              }}>
+            </Image>
+            <Text style={styles.cardText}>{item.nombre}</Text>
+            <Text style={styles.priceText}>$ {item.precio}</Text>
+          </View>
+        </Pressable>
+      )}
+    />
   )
 }
 

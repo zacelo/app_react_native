@@ -4,7 +4,6 @@ import { styles } from './Categories.style'
 import CategoryItem from '../CategoryItem/CategoryItem'
 import { useSelector } from 'react-redux'
 
-
 const Categories = ({ navigation }) => {
 
     const categories = useSelector(state => state.shop.categories)

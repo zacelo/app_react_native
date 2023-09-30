@@ -2,11 +2,11 @@ import { View } from 'react-native'
 import React from 'react'
 import ProductsDetails from '../../components/productsDetails/ProductsDetails'
 import Header from '../../components/header/Header'
+import { useSelector } from 'react-redux'
 
+const ScreenDetails = () => { 
 
-const ScreenDetails = ({route}) => {
-
- const { item } = route.params
+  const item = useSelector(state => state.shop.productIdSelected)
 
   return (
     <View>

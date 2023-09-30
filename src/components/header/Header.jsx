@@ -7,8 +7,7 @@ const Header = ({ title }) => {
     <View style={styles.container}>
       <View>
       <Text style={styles.title}>{ title }</Text>
-      </View>
-     
+      </View>     
     </View>
   )
 }

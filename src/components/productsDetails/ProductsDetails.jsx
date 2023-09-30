@@ -13,7 +13,6 @@ const ProductsDetails = ({ product }) => {
 
   return (
     <View style={styles.container}>
-
       <Image
         style={styles.img}
         source={{

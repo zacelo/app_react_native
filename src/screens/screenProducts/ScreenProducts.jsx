@@ -5,7 +5,6 @@ import Header from '../../components/header/Header'
 import Products from '../../components/products/Products'
 import { useSelector } from 'react-redux'
 
-
 const ScreenProducts = ({ navigation }) => { 
 
   const category = useSelector(state => state.shop.categorySelected)
