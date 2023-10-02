@@ -2,7 +2,7 @@ import { StyleSheet } from 'react-native'
 import { Colors } from '../../constants/Colors'
 
 export const styles = StyleSheet.create({
-    container: {
+    container: {        
         width: '90%',
         height: '85%',
         alignSelf: 'center',
@@ -38,5 +38,6 @@ export const styles = StyleSheet.create({
         fontSize: 25,
         color: Colors.four,
         fontFamily: 'JosefinBoldItalic',
-    }
+    },
+    
 })
