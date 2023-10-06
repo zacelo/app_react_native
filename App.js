@@ -1,5 +1,5 @@
 import { Provider } from 'react-redux';
-import { store } from './src/store';
+import  store  from './src/store';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet } from 'react-native';
 import { useFonts } from 'expo-font';

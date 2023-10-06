@@ -4,6 +4,7 @@ import { styles } from './Cart.style'
 import { useDispatch, useSelector } from 'react-redux'
 import { FontAwesome5 } from '@expo/vector-icons';
 import { deleteToCart } from '../../features/cart/CartSlice';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 const Cart = () => {
   const cart = useSelector(state => state.cart)
@@ -49,13 +50,20 @@ const Cart = () => {
           </>
         )}
       />
-      <View style={styles.totalContainer}>
+      <View >
         {
           totalCarrito() == 0
-            ? <Text style={styles.totalText}>Carrito vacío </Text>
+            ? <>
+              <View style={styles.emptyCartContainer}>
+                <MaterialCommunityIcons name="cart-remove" size={170} color="#D7DCDC" />
+                <Text style={[styles.totalText]}>Carrito vacío </Text>
+              </View>
+            </>
             : <>
-              <Text style={styles.totalText}>Total </Text>
-              <Text style={styles.totalText}> $ {totalCarrito()}</Text>
+              <View style={styles.totalContainer}>
+                <Text style={styles.totalText}>Total </Text>
+                <Text style={styles.totalText}> $ {totalCarrito()}</Text>
+              </View>
             </>
         }
       </View>

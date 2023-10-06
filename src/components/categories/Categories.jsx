@@ -1,22 +1,30 @@
-import { FlatList, View } from 'react-native'
+import { FlatList, View, ActivityIndicator } from 'react-native'
 import React from 'react'
 import { styles } from './Categories.style'
 import CategoryItem from '../CategoryItem/CategoryItem'
-import { useSelector } from 'react-redux'
+import { useGetCategoriesQuery } from '../../services/ShopApi'
+import { Colors } from '../../constants/Colors'
 
-const Categories = ({ navigation }) => {
+const Categories = ({ navigation }) => {    
 
-    const categories = useSelector(state => state.shop.categories)
-    
+    const { data, isLoading } = useGetCategoriesQuery()    
     return (
         <View style={styles.container}>
-            <FlatList
-                data={categories}
-                renderItem={({ item }) =>
-                    <CategoryItem category={{ item }} navigation={navigation}></CategoryItem>
-                }
-                keyExtractor={category => category.id} 
-            />
+            {
+                isLoading
+                    ?
+                    <View style={styles.spinnerContainer}>
+                        <ActivityIndicator size={180} color={Colors.one}/>
+                    </View>
+                    : 
+                    <FlatList
+                        data={data}
+                        renderItem={({ item }) =>
+                            <CategoryItem category={{ item }} navigation={navigation}></CategoryItem>
+                        }
+                        keyExtractor={category => category.id}
+                    />
+            }
         </View>
     )
 }

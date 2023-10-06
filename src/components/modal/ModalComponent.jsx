@@ -12,7 +12,7 @@ const ModalComponent = ({ modalState, setModalState,product,cant,navigation }) =
   return (
     <>
       <Modal
-        animationType='slide'
+        animationType='fade'
         visible={modalState}
         transparent={false}
       >

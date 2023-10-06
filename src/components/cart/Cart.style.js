@@ -6,7 +6,8 @@ export const styles = StyleSheet.create({
         width:'103%',
         alignItems: 'center',
         marginTop: 10,
-        marginBottom:155
+        marginBottom:155,
+        
     },
     cartContainer: {
         flexDirection: 'row',
@@ -29,11 +30,14 @@ export const styles = StyleSheet.create({
         paddingHorizontal:5
     },
     totalContainer:{
-       flexDirection:'row',
-       justifyContent:'center',            
+       flexDirection:'row',                
     },
     totalText:{
         fontSize:30,
-        fontFamily:'JosefinSemiBoldItalic',          
+        fontFamily:'JosefinSemiBoldItalic',    
+    },
+    emptyCartContainer:{
+        alignItems:'center',
+        marginTop:'35%'
     }
 })
