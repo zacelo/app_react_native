@@ -7,8 +7,11 @@ export const shopApi = createApi({
     endpoints:builder => ({
         getCategories: builder.query ({
             query: ()=> 'catagories.json'
+        }),
+        getProductsByCategory:builder.query({
+            query: category => `products.json?orderBy="categoria"&equalTo="${category}"`
         })
     })
 }) 
 
-export const { useGetCategoriesQuery } = shopApi
+export const { useGetCategoriesQuery, useGetProductsByCategoryQuery } = shopApi

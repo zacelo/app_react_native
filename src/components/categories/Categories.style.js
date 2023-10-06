@@ -5,8 +5,5 @@ export const styles = StyleSheet.create({
    container:{          
      marginBottom:180,
      backgroundColor: Colors.four, 
-    }, 
-    spinnerContainer: {    
-    paddingTop: '30%',
-  },
+    }
 })

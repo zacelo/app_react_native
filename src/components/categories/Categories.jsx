@@ -1,21 +1,21 @@
-import { FlatList, View, ActivityIndicator } from 'react-native'
+import { FlatList, View } from 'react-native'
 import React from 'react'
 import { styles } from './Categories.style'
 import CategoryItem from '../CategoryItem/CategoryItem'
 import { useGetCategoriesQuery } from '../../services/ShopApi'
-import { Colors } from '../../constants/Colors'
+
+import Spinner from '../spinner/Spinner'
 
 const Categories = ({ navigation }) => {    
 
-    const { data, isLoading } = useGetCategoriesQuery()    
+    const { data, isLoading } = useGetCategoriesQuery()  
+      
     return (
         <View style={styles.container}>
             {
                 isLoading
                     ?
-                    <View style={styles.spinnerContainer}>
-                        <ActivityIndicator size={180} color={Colors.one}/>
-                    </View>
+                    <Spinner></Spinner>
                     : 
                     <FlatList
                         data={data}

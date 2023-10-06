@@ -4,9 +4,8 @@ import { products } from "../../data/Products.data";
 
 const initialState = {
     categories,
-    products,
-    productFilterByCategories:[],
-    categorySelected:null,
+    products,   
+    categorySelected:null, 
     productIdSelected:null
 }
 
@@ -15,8 +14,7 @@ const ShopSlice = createSlice({
     initialState,
     reducers: {
         setCategorySelected: (state, action)=>{
-            state.categorySelected= action.payload
-            state.productFilterByCategories = state.products.filter(item => item.categoria == action.payload)            
+            state.categorySelected= action.payload           
         },
         setProductIdSelected: (state,action)=>{
            state.productIdSelected = action.payload

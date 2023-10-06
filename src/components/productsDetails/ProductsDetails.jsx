@@ -1,4 +1,4 @@
-import { Pressable, Image, Text, View, Modal, Button } from 'react-native'
+import { Pressable, Image, Text, View  } from 'react-native'
 import React, { useState } from 'react'
 import { styles } from './ProductsDetails.style'
 import Counter from '../counter/Counter';

@@ -3,15 +3,23 @@ import React from 'react'
 import { styles } from './Products.style'
 import { useDispatch, useSelector } from 'react-redux'
 import { setProductIdSelected } from '../../features/shop/ShopSlice'
+import { useGetProductsByCategoryQuery } from '../../services/ShopApi'
+import Spinner from '../spinner/Spinner'
+
 
 const Products = ({ navigation }) => { 
 
-  const productsFilter = useSelector(state => state.shop.productFilterByCategories)
   const dispach = useDispatch()
+  const category = useSelector(state => state.shop.categorySelected)
+  const {data, isLoading} = useGetProductsByCategoryQuery(category)
 
   return (
-    <FlatList
-      data={productsFilter}
+    <>
+    {
+      isLoading 
+      ?<Spinner></Spinner>
+      :<FlatList
+      data={Object.values(data)}
       numColumns={2}
       keyExtractor={item => item.id}
       renderItem={({ item }) => (
@@ -31,7 +39,13 @@ const Products = ({ navigation }) => {
           </View>
         </Pressable>
       )}
-    />
+    /> 
+    }
+     
+    </>
+
+    
+   
   )
 }
 

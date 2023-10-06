@@ -9,8 +9,7 @@ import { setCategorySelected } from '../../features/shop/ShopSlice';
 
 const CategoryItem = ({ category, navigation }) => {
     
-    const dispach = useDispatch()
-  
+    const dispach = useDispatch()     
     return (
         <Pressable  onPress={()=> {            
             dispach(setCategorySelected(category.item.category))           
