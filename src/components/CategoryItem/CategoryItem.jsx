@@ -11,7 +11,7 @@ const CategoryItem = ({ category, navigation }) => {
     
     const dispach = useDispatch()     
     return (
-        <Pressable  onPress={()=> {            
+        <Pressable  onPress={()=> {              
             dispach(setCategorySelected(category.item.category))           
             navigation.navigate('Productos')}
             }>

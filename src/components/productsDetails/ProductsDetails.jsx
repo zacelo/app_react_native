@@ -11,10 +11,10 @@ const ProductsDetails = ({ product,navigation }) => {
   const [modalState, setModalState] = useState(false)
 
   const cant = useSelector(state => state.counter.value)
-  const dispach = useDispatch()
+  const dispach = useDispatch() 
 
   return (
-    <>
+    <>    
       <View style={styles.container}>
         <Image
           style={styles.img}
@@ -37,9 +37,7 @@ const ProductsDetails = ({ product,navigation }) => {
           </View>
         </Pressable>
       </View>
-
       <ModalComponent modalState={modalState} setModalState={setModalState} product={product} cant={cant} navigation={navigation}></ModalComponent>
-
     </>
   )
 }

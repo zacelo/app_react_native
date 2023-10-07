@@ -4,8 +4,8 @@ import { StyleSheet, Text, View } from 'react-native'
 import HomeNavigation from "./HomeNavigation";
 import { Colors } from "../constants/Colors";
 import { FontAwesome5 } from '@expo/vector-icons';
-import ScreenCart from "../screens/screenCart/ScreenCart";
 import { useSelector } from "react-redux";
+import CartNavigation from "./CartNavigation";
 
 const Tab = createBottomTabNavigator()
 
@@ -31,7 +31,7 @@ const ButtonTabNavigation = () => {
             />
             <Tab.Screen
                 name="Carrito"
-                component={ScreenCart}
+                component={CartNavigation}
                 options={{
                     tabBarIcon: ({ focused }) => (
                         <>

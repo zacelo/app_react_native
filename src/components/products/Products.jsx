@@ -6,7 +6,6 @@ import { setProductIdSelected } from '../../features/shop/ShopSlice'
 import { useGetProductsByCategoryQuery } from '../../services/ShopApi'
 import Spinner from '../spinner/Spinner'
 
-
 const Products = ({ navigation }) => { 
 
   const dispach = useDispatch()
