@@ -7,6 +7,10 @@ import fonts from './src/global/fonts';
 import { NavigationContainer } from '@react-navigation/native'
 import ButtonTabNavigation from './src/navigation/ButtonTabNavigation';
 import ScreenLogin from './src/screens/screenLogin/ScreenLogin';
+import ScreenRegister from './src/screens/screenLogin/ScreenRegister';
+import LoginNavigation from './src/navigation/LoginNavigation';
+
+
 
 export default function App() {
 
@@ -20,7 +24,7 @@ export default function App() {
     <Provider store={store}>
       <NavigationContainer>
         {/* <ButtonTabNavigation /> */}
-        <ScreenLogin></ScreenLogin>
+        <LoginNavigation></LoginNavigation>
         <StatusBar style='dark' />
       </NavigationContainer>    
     </Provider>

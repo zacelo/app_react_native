@@ -6,7 +6,7 @@ const ScreenLogin = () => {
     return (
         <>
             <View style={styles.container}>
-                <Text style={styles.textTitle}>Inicia sesión</Text>
+             
                 <View style={styles.inputContainer}>
                     <TextInput
                         style={styles.inputText}

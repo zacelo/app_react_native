@@ -36,19 +36,5 @@ export const styles = StyleSheet.create({
         color:Colors.four,
         fontFamily:'JosefinSemiBoldItalic',
         fontSize:25
-    },
-    registerContainer:{
-        alignItems:'flex-end',
-        width:'100%',
-        marginTop:'15%'
-    },
-    buttonRegisterText:{
-        fontSize:25,
-        fontFamily:'JosefinSemiBoldItalic',
-        color:Colors.two
-    },
-    registerText:{
-        fontSize:17,
-        fontFamily:'JosefinSemiBoldItalic',
-    }
+    },   
 })
