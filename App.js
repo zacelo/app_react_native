@@ -6,6 +6,7 @@ import { useFonts } from 'expo-font';
 import fonts from './src/global/fonts';
 import { NavigationContainer } from '@react-navigation/native'
 import ButtonTabNavigation from './src/navigation/ButtonTabNavigation';
+import ScreenLogin from './src/screens/screenLogin/ScreenLogin';
 
 export default function App() {
 
@@ -18,7 +19,8 @@ export default function App() {
   return (
     <Provider store={store}>
       <NavigationContainer>
-        <ButtonTabNavigation />
+        {/* <ButtonTabNavigation /> */}
+        <ScreenLogin></ScreenLogin>
         <StatusBar style='dark' />
       </NavigationContainer>    
     </Provider>
